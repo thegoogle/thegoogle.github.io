@@ -8,6 +8,7 @@ var vstep = document.getElementById("istep");
 var vdad = document.getElementById("idad");
 var vcontact = document.getElementById("icontact");
 var vfeedback = document.getElementById("ifeedback");
+var vwish = document.getElementById("iwish");
 
 var ta = document.getElementById('contentdiv');		
 var x = new XMLHttpRequest;
@@ -91,6 +92,13 @@ function ffeedback(){
 	x.send();
 }
 
+function fwish(){
+	x.abort();
+	x.open("GET", "pages/wish.html");
+	x.onreadystatechange =funct;
+	x.send();
+}
+
 window.onload=func;
 
 if(vhome){
@@ -161,4 +169,11 @@ if(vfeedback){
 		vfeedback.addEventListener("click", ffeedback, false);
 	else if(vfeedback.attachEvent)
 		vfeedback.attachEvent('onclick', ffeedback);
+}
+
+if(vwish){
+	if(vwish.addEventListener)
+		vwish.addEventListener("click", fwish, false);
+	else if(vfeedback.attachEvent)
+		vwish.attachEvent('onclick', fwish);
 }
