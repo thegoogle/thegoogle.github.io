@@ -1,2 +1,2 @@
-# git
-Test Website
+# Kaushal Kumar
+Mechanical Engineer and a Mathematics Enthusiast
